@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <title>Список видео</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <nav class="mt-5 mb-3"><a href="/">Назад, на главную</a></nav>
+            {% for video in videos %}
+            <h5 class="mb-3"><a href="/videos/{{ video.id }}">{{ video.id }}. {{ video.title }}</a></h5>
+            {% endfor %}
+         </div>
+    </div><!--/row-->
+</div><!--/container-->
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+  <title>TheMartianPond</title>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="mb-3">{{ current_playlist.title }}</h2>
+
+    <div class="row">
+        <div class="col-md-8">
+            <nav class="mt-5 mb-3"><a href="/">Назад, на главную</a></nav>
+            {% for video in videos %}
+                {% if video.id in current_playlist.videos %}
+                    <h5 class="mb-3"><a href="/videos/{{ video.id }}">{{ video.id }}. {{ video.title }}</a></h5>
+                {% endif %}
+            {% endfor %}
+         </div>
+    </div><!--/row-->
+</div><!--/container-->
+
+</body>
+</html>
