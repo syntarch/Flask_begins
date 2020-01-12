@@ -8,15 +8,13 @@
 <body>
 
 <div class="container">
-    <h2 class="mb-3">{{ current_playlist.title }}</h2>
+    <h2 class="mb-3">{{ new_playlist.title }}</h2>
 
     <div class="row">
         <div class="col-md-8">
             <nav class="mt-5 mb-3"><a href="/">Назад, на главную</a></nav>
-            {% for video in videos %}
-                {% if video.id in current_playlist.videos %}
-                    <h5 class="mb-3"><a href="/videos/{{ video.id }}">{{ video.id }}. {{ video.title }}</a></h5>
-                {% endif %}
+            {% for video in new_playlist %}
+                <h5 class="mb-3"><a href="/videos/{{ video.id }}">{{ video.number_id }}. {{ video.title }}</a></h5>
             {% endfor %}
          </div>
     </div><!--/row-->

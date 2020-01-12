@@ -32,9 +32,9 @@
 	        <div class="card mb-4" >
 	          <div class="card-body">
 	              <img src="/static/images/1.jpg" alt="" class="img-fluid">
-	              <h5 class="card-title mt-3"><a href="playlists/about_astrobiology">Об Астробиологии</a></h5>
+	              <h5 class="card-title mt-3"><a href="playlists/about_astrobiology">{{ playlists.about_astrobiology.title }}</a></h5>
 	              <p class="card-text"></p>
-	              <p class="card-text">1 видео</p>
+	              <p class="card-text">{{ playlists.about_astrobiology.videos|length }} видео</p>
 	          </div>
 	        </div>
 	    </div>
@@ -42,9 +42,9 @@
 	        <div class="card mb-4" >
 	          <div class="card-body">
 	              <img src="/static/images/2.jpg" alt="" class="img-fluid">
-	              <h5 class="card-title mt-3"><a href="playlists/life_search">Поиск жизни за пределами Земли</a></h5>
+	              <h5 class="card-title mt-3"><a href="playlists/life_search">{{ playlists.life_search.title }}</a></h5>
 	              <p class="card-text"></p>
-	              <p class="card-text">3 видео</p>
+	              <p class="card-text">{{ playlists.life_search.videos|length }} видео</p>
 	          </div>
 	        </div>
 	    </div>
